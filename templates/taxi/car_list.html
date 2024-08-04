@@ -4,7 +4,7 @@
   {% if car_list %}
    {% for car in car_list %}
      <ul>
-      <li><a href="{% url 'taxi:car_detail' car.id %}">{{ car.model }}</a></li>
+      <li><a href="{{ car.get_absolute_url }}">{{ car.model }}</a></li>
      </ul>
    {% endfor %}
   {% else %}
